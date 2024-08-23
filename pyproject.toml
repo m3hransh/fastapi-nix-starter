@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "fastapi-starter"
+version = "0.1.0"
+description = ""
+authors = ["Mehran Shahidi <m.mehranshahidi@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "rest_api" }]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = { extras = ["standard"], version = "^0.112.0"}
+structlog = "^23.2.0"
+uvicorn = { extras = ["standard"], version = "^0.25.0" }
+
+[tool.poetry.group.dev.dependencies]
+httpx = "^0.26.0"
+pytest = "^7.4.3"
+pytest-cov = "^4.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
